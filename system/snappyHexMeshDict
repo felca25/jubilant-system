@@ -193,12 +193,12 @@ castellatedMeshControls
         }
         propeller
         {
-            level       (4 5);
+            level       (5 7);
             regions
             {
                 propeller
                 {
-                    level (5 5);
+                    level (7 7);
                 }
             }
         }
@@ -226,12 +226,12 @@ castellatedMeshControls
         innerCylinder
         {
             mode    inside;
-            level   4;
+            level   5;
         }
         middleCylinder
         {
             mode    inside;
-            level   3;
+            level   4;
         }
         // minVolRatio 0.01;
     }
@@ -307,8 +307,9 @@ addLayersControls
     {
         propeller{
             type wall;
-            nSurfaceLayers 5;
+            nSurfaceLayers 7;
             expansionRatio 1.2;
+            thickness 0.5;
         }
         outerCylinder
         {
