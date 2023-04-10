@@ -6,8 +6,8 @@ cd ${0%/*} || exit 1
 runApplication blockMesh
 runApplication surfaceFeatures
 runApplication decomposePar -noFields
-runParallel snappyHexMesh -overwrite
-# mpirun -np 4 snappyHexMesh -parallel -overwrite
+# runParallel snappyHexMesh -overwrite
+mpirun -np 4 snappyHexMesh -parallel -overwrite
 runParallel createBaffles -overwrite
 runParallel splitBaffles -overwrite
 
