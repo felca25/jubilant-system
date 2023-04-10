@@ -1,0 +1,42 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : dev-91d48d2eb645
+Exec   : splitBaffles -parallel -overwrite
+Date   : Apr 10 2023
+Time   : 06:29:43
+Host   : "2b237630cb0d"
+PID    : 1320
+I/O    : uncollated
+Case   : /home/openfoam
+nProcs : 4
+Slaves : 
+3
+(
+"2b237630cb0d.1323"
+"2b237630cb0d.1326"
+"2b237630cb0d.1329"
+)
+
+Pstream initialised with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Writing mesh to time 0
+End
+
+Finalising parallel run

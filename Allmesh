@@ -1,0 +1,18 @@
+#!/bin/sh
+cd ${0%/*} || exit 1
+
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+runApplication blockMesh
+runApplication surfaceFeatures
+runApplication decomposePar -noFields
+runParallel snappyHexMesh -overwrite
+# mpirun -np 4 snappyHexMesh -parallel -overwrite
+runParallel createBaffles -overwrite
+runParallel splitBaffles -overwrite
+
+runParallel renumberMesh -noFields -overwrite
+
+runParallel createNonConformalCouples -overwrite nonCouple1 nonCouple2
+
+#------------------------------------------------------------------------------

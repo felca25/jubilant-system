@@ -1,0 +1,57 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : dev-91d48d2eb645
+Exec   : createNonConformalCouples -parallel -overwrite nonCouple1 nonCouple2
+Date   : Apr 10 2023
+Time   : 06:30:11
+Host   : "2b237630cb0d"
+PID    : 1382
+I/O    : uncollated
+Case   : /home/openfoam
+nProcs : 4
+Slaves : 
+3
+(
+"2b237630cb0d.1385"
+"2b237630cb0d.1388"
+"2b237630cb0d.1390"
+)
+
+Pstream initialised with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Adding nonConformalCyclic interfaces between patches: 
+    (nonCouple1 nonCouple2)
+Named:
+    (nonConformalCyclic_on_nonCouple1 nonConformalCyclic_on_nonCouple2)
+With transform: 
+    transformType   none;
+
+patchToPatch: Calculating couplings between 26229 source faces and 26229 target faces
+    Source min/average/max coverage = 1/1/1
+    Target min/average/max coverage = 1/1/1
+    Source average openness/error/depth/angle = 7.59612e-17/3.45769e-15/1.28084e-15/1.76918e-07
+    Source max openness/error/depth/angle = 4.20073e-15/1.51356e-11/4.06909e-14/1.70755e-06
+    54606 couplings calculated in 62.1429s
+fvMeshStitcher: Connecting
+Writing mesh to 0
+
+End
+
+Finalising parallel run

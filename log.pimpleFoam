@@ -1,0 +1,136 @@
+
+pimpleFoam has been superseded and replaced by the more general
+incompressibleFluid solver module executed by the foamRun application:
+
+    foamRun -solver incompressibleFluid
+
+
+pimpleFoam has been superseded and replaced by the more general
+incompressibleFluid solver module executed by the foamRun application:
+
+    foamRun -solver incompressibleFluid
+
+
+pimpleFoam has been superseded and replaced by the more general
+incompressibleFluid solver module executed by the foamRun application:
+
+    foamRun -solver incompressibleFluid
+
+
+pimpleFoam has been superseded and replaced by the more general
+incompressibleFluid solver module executed by the foamRun application:
+
+    foamRun -solver incompressibleFluid
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  dev
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : dev-91d48d2eb645
+Exec   : foamRun -solver incompressibleFluid -parallel
+Date   : Apr 10 2023
+Time   : 06:53:46
+Host   : "2b237630cb0d"
+PID    : 1545
+I/O    : uncollated
+Case   : /home/openfoam
+nProcs : 4
+Slaves : 
+3
+(
+"2b237630cb0d.1548"
+"2b237630cb0d.1551"
+"2b237630cb0d.1554"
+)
+
+Pstream initialised with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+patchToPatch: Calculating couplings between 26229 source faces and 26229 target faces
+    Source min/average/max coverage = 1/1/1
+    Target min/average/max coverage = 1/1/1
+    Source average openness/error/depth/angle = 7.59612e-17/3.45769e-15/1.28084e-15/1.76918e-07
+    Source max openness/error/depth/angle = 4.20073e-15/1.51356e-11/4.06909e-14/1.70755e-06
+    54606 couplings calculated in 43.8835s
+fvMeshStitcher: Connecting
+    Cell min/avg/max openness = 0/6.01185e-17/3.47424e-16
+Selecting fvMeshMover motionSolver
+Selecting motion solver: solidBody
+Selecting solid-body motion function rotatingMotion
+    - selecting cells using cellZone innerCylinder
+Selecting solver incompressibleFluid
+Selecting viscosity model constant
+Selecting turbulence model type RAS
+Selecting RAS turbulence model kEpsilon
+No MRF models present
+
+Constructing face momentum Uf
+Courant Number mean: 2.50543e-05 max: 0.00524888
+
+PIMPLE: No convergence criteria found
+
+
+PIMPLE: No corrector convergence criteria found
+        Calculations will do 2 corrections
+
+
+PIMPLE: Operating solver in transient mode with 2 outer correctors
+
+
+Reading surface description:
+    zNormal
+    isoQ
+    propeller
+
+forces forces:
+    Not including porosity effects
+
+Starting time loop
+
+--> FOAM Warning : 
+    From function Foam::triFace Foam::tetIndices::faceTriIs(const Foam::polyMesh&) const
+    in file /home/ubuntu/OpenFOAM/OpenFOAM-dev/src/OpenFOAM/lnInclude/tetIndicesI.H at line 86
+    No base point for face 605888, 3(74847 19324 55809), produces a valid tet decomposition.
+forces forces write:
+    sum of forces:
+        pressure : (0 0 0)
+        viscous  : (0 0 0)
+        porous   : (0 0 0)
+    sum of moments:
+        pressure : (0 0 0)
+        viscous  : (0 0 0)
+        porous   : (0 0 0)
+
+Courant Number mean: 2.50543e-05 max: 0.00524888
+fvMeshStitcher: Disconnecting
+    Cell min/avg/max openness = 0/5.85981e-17/2.68192e-16
+deltaT = 1e-05
+Time = 1e-05s
+
+PIMPLE: Iteration 1
+patchToPatch: Calculating couplings between 26229 source faces and 26229 target faces
+    Source min/average/max coverage = 0.715908/0.999741/1
+    Target min/average/max coverage = 0.685562/0.99985/1
+    Source average openness/error/depth/angle = 1.52848e-16/1.30782e-05/0.00129327/0.124195
+    Source max openness/error/depth/angle = 5.17627e-15/0.0507164/0.0451331/5.52036
+    229042 couplings calculated in 8.30744s
+fvMeshStitcher: Connecting
+    smoothSolver:  Solving for MeshPhi, Initial residual = 1, Final residual = nan, No Iterations 1000
+    Cell min/avg/max openness = 0/-nan/5.03405e-16
+    Cell min/avg/max volume conservation error = -1.62029e-14/-nan/9.42495e-15
+    nonConformalCyclic_on_nonCouple1 min/avg/max mesh flux error = 0/-nan/0
+GAMG:  Solving for pcorr, Initial residual = nan, Final residual = nan, No Iterations 50
